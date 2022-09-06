@@ -1,0 +1,141 @@
+.game-board {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 30px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.2s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    top: 20%;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.game-over {
+    animation: game-over-animation 1s forwards ease-out;
+    width: 75px;
+    margin-left: 50px;
+}
+
+p {
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+.mensage-continue, .mensage-game-over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.mensage-game-over {
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, .99);
+}
+.mensage-continue {
+    color: white;
+    margin-top: 10em;
+    animation: blink 1.7s infinite linear;
+}
+
+.record, .score {
+    color: white;
+    font-size: 2em;
+    top: 0;
+    margin: 50px;
+    position: absolute;
+    z-index: 3;
+}
+
+.score {
+    right: 0; 
+}
+
+@keyframes blink {
+    0% {
+        opacity: .8;
+    }
+    50% {
+        opacity: .2;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+@keyframes game-over-animation {
+    0% {
+        bottom: 0;
+        transform: scale(1);
+    }
+    50% {
+        bottom: 100px;
+        transform: scale(1.2);
+    }
+    100% {
+        bottom: -100%;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 200px;
+    }
+    50% {
+        bottom: 200px;
+    }
+    60% {
+        bottom: 200px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
