@@ -22,10 +22,11 @@ const clonePipe = (timeDelay) => {
 
 const pipe2 = clonePipe(9.5); 
 
-const jump = () => {
-    if (endGame) {
+const jump = (event) => {
+    console.log(event.keyCode);
+    if (endGame && event.keyCode == 32) {
         document.location.reload(true); 
-    } else {
+    } else if (event.keyCode == 32) {
         soundJump.volume = 0.1;
         soundJump.currentTime = 0.2;
         soundJump.play();

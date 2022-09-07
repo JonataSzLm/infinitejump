@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +35,7 @@
         <img src="img/mario.gif" class="mario">
         <img src="img/pipe.png" class="pipe">
         <p class="mensage-game-over">Game Over</p>
-        <span class="mensage-continue">Precione qualquer tecla para continuar</span>
+        <span class="mensage-continue">Precione a tecla de espaço para continuar</span>
     </div>
 </body>
 </html>
