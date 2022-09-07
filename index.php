@@ -25,6 +25,9 @@
     <meta name="theme-color" content="#38FF38">
 </head>
 <body>
+    <audio src="/sounds/jump.mp3" id="jumpsound"></audio>
+    <audio src="/sounds/go.mp3" id="gosound"></audio>
+    <audio src="/sounds/music.mp3" id="music"></audio>
     <div class="game-board">
         <span class="score">Score: <span data-score></span></span>
         <span class="record">Record: <span data-record></span></span>
@@ -44,7 +47,5 @@
     Adicionar novos desafios, buracos e inimigos
     Randomizar inimigos
     Adicionar habilidade de giro no mario para derrotar inimigos
-
-
     | .5s | 
 -->

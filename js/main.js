@@ -5,10 +5,12 @@ const msgGO = document.querySelector('.mensage-game-over');
 const msgContinue = document.querySelector('.mensage-continue');
 const score = document.querySelector('[data-score]');
 const record  = document.querySelector('[data-record]');
+const music = document.querySelector('#music');
+const soundJump = document.querySelector('#jumpsound');
+const soundGO = document.querySelector('#gosound');
 let endGame = false;
 let time = 0;
 score.innerText = '00';
-
 
 const clonePipe = (timeDelay) => {
     const pipeClone = pipe.cloneNode(true);
@@ -18,12 +20,15 @@ const clonePipe = (timeDelay) => {
     return pipeClone;
 }
 
-const pipe2 = clonePipe(20.5); 
+const pipe2 = clonePipe(9.5); 
 
 const jump = () => {
     if (endGame) {
         document.location.reload(true); 
     } else {
+        soundJump.volume = 0.1;
+        soundJump.currentTime = 0.2;
+        soundJump.play();
         mario.classList.add('jump');
         setTimeout(() => {
             mario.classList.remove('jump');
@@ -32,6 +37,11 @@ const jump = () => {
 }
 
 const gameOver = (marioPosition, pipePosition, pipe2Position) => {
+    
+    music.pause();
+    soundGO.volume = 0.4;
+    soundGO.currentTime = 0.3;
+    soundGO.play();
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`;
     pipe2.style.animation = 'none';
@@ -75,6 +85,10 @@ const checkGameOver = (marioPosition, pipePosition) => {
     }
     return false;
 }
+
+music.volume = 0.5;
+music.play();
+music.loop = true;
 
 loadRecord();
 
