@@ -38,9 +38,13 @@
 </html>
 
 <!-- 
+    tornar responsivo
     <a href="https://www.flaticon.com/free-icons/super-mario" title="super-mario icons">Super-mario icons created by Freepik - Flaticon</a>
     Aumentar a velocidade com o tempo
     Adicionar novos desafios, buracos e inimigos
     Randomizar inimigos
     Adicionar habilidade de giro no mario para derrotar inimigos
+
+
+    | .5s | 
 -->
